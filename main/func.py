@@ -1,10 +1,8 @@
 import os, json
 
-def load_function():
+def load_function(filename):
     '''загружает текстовые данные из внешнего файла'''
-
-    path = "operations.json"
-    file_path = os.path.join(path)
+    file_path = os.path.abspath(filename)
     with open(file_path, 'r') as file:
         return json.load(file)
 
